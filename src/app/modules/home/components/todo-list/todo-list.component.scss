@@ -28,11 +28,13 @@ section {
       input {
         &[type="checkbox"] {
           width: 5%;
+          margin-right: 0.5rem;
         }
         &[type="text"] {
           width: 80%;
           padding: 5px 10px;
           border: none;
+          margin-left: 1rem;
 
           font-size: 16px;
           color: $primary-text-color;
@@ -44,9 +46,17 @@ section {
 
       button {
         width: 5%;
+        background: none;
+        border: none;
+      }
 
-        // background: none;
-        // border: none;
+      .rename-icon {
+        width: 30px;
+        height: 30px;
+      }
+      .delete-icon {
+        width: 20px;
+        height: 20px;
       }
     }
   }

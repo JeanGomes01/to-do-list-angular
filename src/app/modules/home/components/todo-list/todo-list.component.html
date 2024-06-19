@@ -2,6 +2,14 @@
   <ul *ngIf="tasklist.length">
     <li *ngFor="let item of tasklist; let i = index">
       <input type="checkbox" [(ngModel)]="item.checked" />
+
+      <button>
+        <img
+          class="rename-icon"
+          src="https://img.icons8.com/arcade/64/edit.png"
+          alt="edit text"
+        />
+      </button>
       <input
         type="text"
         (keyup)="validationInput(item.task, i)"
@@ -10,7 +18,13 @@
       />
 
       <button (click)="deleteItemTaskList(i)">
-        <img src="../../../../../assets/icons/icon-trash.svg" alt="" />
+        <div>
+          <img
+            class="delete-icon"
+            src="https://img.icons8.com/deco/48/trash.png"
+            alt="trash"
+          />
+        </div>
       </button>
     </li>
   </ul>
