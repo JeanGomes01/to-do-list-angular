@@ -3,7 +3,7 @@
     <li *ngFor="let item of tasklist; let i = index">
       <input type="checkbox" [(ngModel)]="item.checked" />
 
-      <button>
+      <button (click)="focusInput(textInput)">
         <img
           class="rename-icon"
           src="https://img.icons8.com/arcade/64/edit.png"
@@ -11,10 +11,12 @@
         />
       </button>
       <input
+        #textInput
         type="text"
         (keyup)="validationInput(item.task, i)"
         [(ngModel)]="item.task"
         [ngClass]="{ checked: item.checked }"
+        placeholder="Digite o nome de sua Task..."
       />
 
       <button (click)="deleteItemTaskList(i)">

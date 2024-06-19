@@ -41,6 +41,11 @@ export class TodoListComponent implements DoCheck {
     }
   }
 
+  public focusInput(textInput: HTMLInputElement) {
+    const taskValue = textInput;
+    taskValue.focus();
+  }
+
   public setLocalStorage() {
     if (this.tasklist) {
       this.tasklist.sort(
