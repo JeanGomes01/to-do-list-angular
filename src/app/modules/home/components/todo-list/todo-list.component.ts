@@ -10,6 +10,7 @@ export class TodoListComponent implements DoCheck {
   public tasklist: Array<TaskList> = JSON.parse(
     localStorage.getItem('list') || '[]'
   );
+  public isDisabled: boolean = true;
 
   constructor() {}
 
@@ -44,6 +45,10 @@ export class TodoListComponent implements DoCheck {
   public focusInput(textInput: HTMLInputElement) {
     const taskValue = textInput;
     taskValue.focus();
+  }
+
+  public enableInput() {
+    this.isDisabled = false;
   }
 
   public setLocalStorage() {

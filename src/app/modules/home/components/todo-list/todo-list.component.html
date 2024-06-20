@@ -2,15 +2,9 @@
   <ul *ngIf="tasklist.length">
     <li *ngFor="let item of tasklist; let i = index">
       <input type="checkbox" [(ngModel)]="item.checked" />
-
-      <button (click)="focusInput(textInput)">
-        <img
-          class="rename-icon"
-          src="https://img.icons8.com/arcade/64/edit.png"
-          alt="edit text"
-        />
-      </button>
       <input
+        [readonly]="isDisabled"
+        autofocus
         #textInput
         type="text"
         (keyup)="validationInput(item.task, i)"
@@ -18,6 +12,17 @@
         [ngClass]="{ checked: item.checked }"
         placeholder="Digite o nome de sua Task..."
       />
+
+      <button
+        (click)="focusInput(textInput); enableInput()"
+        class="renameButton"
+      >
+        <img
+          class="rename-icon"
+          src="https://img.icons8.com/arcade/64/edit.png"
+          alt="edit text"
+        />
+      </button>
 
       <button (click)="deleteItemTaskList(i)">
         <div>

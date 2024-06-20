@@ -27,14 +27,17 @@ section {
 
       input {
         &[type="checkbox"] {
-          width: 5%;
+          width: 4%;
           margin-right: 0.5rem;
         }
+
         &[type="text"] {
-          width: 80%;
+          pointer-events: none;
+          background-color: #f0f0f0;
+          border-radius: 1rem;
+          width: 60%;
           padding: 5px 10px;
           border: none;
-          margin-left: 1rem;
 
           font-size: 16px;
           color: $primary-text-color;
@@ -42,21 +45,42 @@ section {
             text-decoration: line-through;
           }
         }
+        &[type="text"]:focus {
+          outline: 2px solid $primary-color;
+          border-radius: 1.5rem;
+        }
       }
 
       button {
-        width: 5%;
-        background: none;
-        border: none;
+        width: 35px;
+        border: 1px solid black;
+        border-radius: 1rem;
+        background-image: linear-gradient(
+          144deg,
+          #c098f5,
+          rgb(142, 62, 247) 50%,
+          #aa77ec
+        );
       }
 
       .rename-icon {
         width: 30px;
         height: 30px;
+        // border-radius: 1rem;
       }
+
+      .rename-icon:hover {
+        background-color: white;
+        border-radius: 1rem;
+      }
+
       .delete-icon {
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
+      }
+      .delete-icon:hover {
+        background-color: white;
+        border-radius: 1rem;
       }
     }
   }
