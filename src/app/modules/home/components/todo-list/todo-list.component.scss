@@ -51,36 +51,39 @@ section {
         }
       }
 
-      button {
-        width: 35px;
-        border: 1px solid black;
-        border-radius: 1rem;
-        background-image: linear-gradient(
-          144deg,
-          #c098f5,
-          rgb(142, 62, 247) 50%,
-          #aa77ec
-        );
+      //  Class do botão rename
+      .renameButton {
+        width: 10%;
+        border: none;
+        border-radius: 0.8rem;
+        background-color: rgb(142, 62, 247);
+        margin-left: 1rem;
       }
 
       .rename-icon {
-        width: 30px;
-        height: 30px;
-        // border-radius: 1rem;
+        width: 100%;
       }
 
       .rename-icon:hover {
         background-color: white;
-        border-radius: 1rem;
+      }
+
+      // Class do botão delete
+      .deleteButton {
+        width: 10%;
+        border: none;
+        border-radius: 0.8rem;
+        background-color: rgb(240, 238, 238);
+        margin-left: 1rem;
       }
 
       .delete-icon {
-        width: 30px;
-        height: 30px;
+        width: 100%;
       }
+
       .delete-icon:hover {
-        background-color: white;
-        border-radius: 1rem;
+        background-color: #b3b1b3;
+        border-radius: 0.6rem;
       }
     }
   }
